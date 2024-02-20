@@ -1,49 +1,85 @@
 "use client"
 
-import { navlink } from "./dummy";
-import Image from "next/image";
-import dami from "@public/assets/images/dami.jpeg";
-import { MdMenu } from "react-icons/md";
-import { useState } from "react";
-import { Link } from "react-scroll";
+import Link from "next/link"
+import Image from "next/image"
+import dami from "../public/assets/images/dami.jpeg"
+import { navlink } from "./dummy"
+import Modal from "./Modal"
+import { useState } from "react"
+import { CiMenuBurger } from "react-icons/ci"
 
+const Nav = ({children}) => {
+  const [visible, setVisible] = useState(false);
 
-const Nav = () => {
-  const [open, setOpen] = useState(false);
-
-  const handleOpen = () =>{
-    setOpen((prev)=>!prev)
+  const handleVisible= () => {
+    setVisible((prev)=>!prev);
   }
   return (
-    <section className="w-full flex items-center justify-between p-3 ">
-      <MdMenu
-        className="absolute top-2 left-2 text-white sm:visible lg:hidden"
-        size={30}
-        onClick={handleOpen}
-      />
-      <div >
-        <Image
-          width="fill"
-          alt="damilare portfolio"
-          src={dami}
-          className="profileImg w-32 h-32 rounded-full"
-        />
-      </div>
-      {
-        !open ? 
-        (<ul className="flex lg:flex-row sm:flex-col">
-        {
-            navlink.map((item, id) => (
-                <Link className="navlink mx-5 my-5 text-white capitalize text-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-500 cursor-pointer" 
-                key={id} to={item.path} spy={true} smooth={true} offset={50} duration={500} >
-                  {item.title}
-                </Link>
-            ))
-        }
-      </ul>):
-        ('')
-      }
+    <nav className="w-full h-full">
+
+        {/* Desktop view */}
+        
+      <section className="hidden lg:flex lg:flex-col lg:w-full fixed top-0 z-50 bg-black">
+          <div className="flex flex-row  items-center justify-between py-3 px-5">
+            <Link href={"/"}>
+              <Image
+                src={dami}
+                alt="damilare portfolio"
+                width={20}
+                height={20}
+                className="w-20 h-20 rounded-full"
+              />
+            </Link>
+            <div>
+              {
+                navlink.map((item, index) => (
+                  <Link key={index} href={item.path} className="navLink text-red-500/40">
+                    {item.title}
+                  </Link>
+                ))
+              }
+            </div>
+          </div>
+          <hr className="w-full h-1 bg-red-500 mt-2"/>
+        </section>
+        {/* Mobile view */}
+        <section className="lg:hidden flex w-full relative z-50">
+          <div className="bg-red-500 rounded-full fixed top-3 left-3">
+            <CiMenuBurger size={30} className="p-2 font-bold text-lg" onClick={handleVisible}/>
+          </div>
+          {
+            visible && 
+              <Modal visible={visible}>
+                <div className="bg-black w-[70%] h-full">
+                  <div className="flex flex-row items-center justify-between py-4 px-2">
+                    <Link href={"/"}>
+                      <Image
+                        src={dami}
+                        alt="damilare portfolio"
+                        width={10}
+                        height={10}
+                        className="w-10 h-10 rounded-full"
+                      />
+                    </Link>
+                    <h2 className="text-red-500 text-xl font-bold capitalize">damilare</h2>
+                  </div>
+                  <div className="flex flex-col p-3 w-full h-full overflow-y-scroll">
+                    {
+                      navlink.map((item, index) => (
+                        <Link key={index} href={item.path} className="capitalize border-b-2 border-red-500 py-5 focus:text-red-500 text-red-500/40" onClick={handleVisible}>
+                          {item.title}
+                        </Link>
+                      ))
+                    }
+                  </div>
+                </div>
+              </Modal>
+          }
     </section>
+    <div className='text-white lg:mt-40 sm:mt-20 overflow-y-scroll'>
+      {children}
+    </div>
+  </nav>
   )
 }
 

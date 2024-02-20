@@ -1,28 +1,18 @@
 import '@styles/globals.css'
-import Home from '@app/page';
-import About from '@app/pages/about/page';
-import Projects from '@app/pages/projects/page';
-import Technologies from '@app/pages/technologies/page';
-import Contact from '@app/pages/contact/page';
-import Footer from '@app/pages/footer/page';
+import Nav from '@components/Nav'
+
 
 export const metadata = {
     title: "Portfolio",
     description: "Damilare Tech Portfolio"
 }
 
-const RootLayout = () => {
+const RootLayout = ({children}) => {
   return (
     <html lang='en'>
-      <body>
-        <main className='app bg-gradient-to-r from-sky-200 to-sky-50'>
-          <Home/>
-          <About/>
-          <Projects/>
-          <Technologies/>
-          <Contact/>
-          <Footer/>
-        </main>
+      <body className='bg-black text-white font-serif'>
+        <Nav/>
+        {children}
       </body>
     </html>
   )
