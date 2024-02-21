@@ -66,7 +66,7 @@ const Nav = ({children}) => {
                   <div className="flex flex-col p-3 w-full h-full overflow-y-scroll">
                     {
                       navlink.map((item, index) => (
-                        <Link key={index} href={item.path} className="capitalize border-b-2 border-red-500 py-5 focus:text-red-500 text-red-500/40" onClick={handleVisible}>
+                        <Link key={index} href={item.path} className="capitalize border-b-2 border-red-500 py-5 active:text-red-500 text-red-500/40" onClick={handleVisible}>
                           {item.title}
                         </Link>
                       ))
