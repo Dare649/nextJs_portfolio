@@ -6,7 +6,7 @@ const Typing = () => {
   return (
     <div>
       <TypeAnimation
-        className='font-bold text-9xl text-red-500'
+        className='font-bold text-9xl text-red-500 sm:px-2 lg:px-0'
       sequence={[
         'I\'m a MERN Stack Developer...',
         2000, 
