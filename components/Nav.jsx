@@ -42,6 +42,7 @@ const Nav = ({children}) => {
           </div>
           <hr className="w-full h-1 bg-red-500 mt-2"/>
         </section>
+
         {/* Mobile view */}
         <section className="lg:hidden flex w-full relative z-50">
           <div className="bg-red-500 rounded-full fixed top-3 left-3">
@@ -76,7 +77,7 @@ const Nav = ({children}) => {
               </Modal>
           }
     </section>
-    <div className='text-white lg:mt-40 sm:mt-20 overflow-y-scroll'>
+    <div className='text-white lg:mt-40 sm:mt-20 overflow-y-scroll sm:px-3'>
       {children}
     </div>
   </nav>

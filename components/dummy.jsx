@@ -65,6 +65,22 @@ export const stacks = [
         title: "next js (client side)",
         rate: 70
     },
+    {
+        title: "node js",
+        rate: 30
+    },
+    {
+        title: "express",
+        rate: 30
+    },
+    {
+        title: "mongo db",
+        rate: 40
+    },
+    {
+        title: "mongoose",
+        rate: 40
+    },
 ]
 
 export const projects = [
