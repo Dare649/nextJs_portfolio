@@ -77,7 +77,7 @@ const Nav = ({children}) => {
               </Modal>
           }
     </section>
-    <div className='text-white lg:mt-40 sm:mt-20 overflow-y-scroll sm:px-3'>
+    <div className='text-white lg:mt-40 sm:mt-20 overflow-y-scroll sm:px-4 lg:px-2'>
       {children}
     </div>
   </nav>
