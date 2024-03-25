@@ -2,9 +2,10 @@ import { stacks } from "@components/dummy"
 import ProgressBar from "@components/ProgressBar"
 
 const Technologies = () => {
-  const first = stacks.slice(0, 5);
-  const second = stacks.slice(5, 10);
-  const third = stacks.slice(10, 14);
+  const first = stacks.slice(0, 4);
+  const second = stacks.slice(4, 8);
+  const third = stacks.slice(8, 12);
+  const fourth = stacks.slice(12, 16);
 
   return (
     <div className="lg:px-5 sm:px-2">
@@ -13,6 +14,7 @@ const Technologies = () => {
         <ProgressBar data={first}/>
         <ProgressBar data={second}/>
         <ProgressBar data={third}/>
+        <ProgressBar data={fourth}/>
       </div>
     </div>
   )

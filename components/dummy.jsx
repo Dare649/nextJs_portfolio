@@ -81,6 +81,18 @@ export const stacks = [
         title: "mongoose",
         rate: 40
     },
+    {
+        title: "C#",
+        rate: 25
+    },
+    {
+        title: "asp.net framework",
+        rate: 25
+    },
+    {
+        title: "ms sql",
+        rate: 30
+    },
 ]
 
 export const projects = [
