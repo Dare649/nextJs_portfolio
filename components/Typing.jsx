@@ -8,7 +8,7 @@ const Typing = () => {
       <TypeAnimation
         className='font-bold text-9xl text-red-500 sm:px-2 lg:px-0'
       sequence={[
-        'I\'m a MERN Stack Developer...',
+        'I\'m a Software Developer...',
         2000, 
         'I\'m a Tech Enthusiast...',
         2000,

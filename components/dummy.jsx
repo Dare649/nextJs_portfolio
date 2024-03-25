@@ -86,7 +86,7 @@ export const stacks = [
         rate: 25
     },
     {
-        title: "asp.net framework",
+        title: "asp.net",
         rate: 25
     },
     {
