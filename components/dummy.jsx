@@ -114,7 +114,7 @@ export const projects = [
     },
     {
         title: "trybrass",
-        description: "this is was a website i was tasked to build as an assessment of my skill for the role of a software developer at Webify. I used next js and tailwind css.",
+        description: "this was a website i was tasked to build as an assessment of my skill for the role of a software developer at Webify. I used next js and tailwind css.",
         link: "https://trybrass.vercel.app/",
         image: trybrass
     },
