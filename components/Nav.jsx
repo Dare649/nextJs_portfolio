@@ -40,7 +40,7 @@ const Nav = ({children}) => {
               }
             </div>
           </div>
-          <hr className="w-full h-1 bg-red-500 mt-2"/>
+          <hr className="w-full h-1 bg-red-500 mt-2 border-none"/>
         </section>
 
         {/* Mobile view */}

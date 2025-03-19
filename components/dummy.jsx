@@ -1,7 +1,9 @@
-import mazaways from "../public/assets/images/mazaways.png"
-import tepnews from "../public/assets/images/tepnews.png"
-import sell from "../public/assets/images/sell.png"
-import Image from "next/image"
+import hoechy from "../public/assets/images/hoechy.png";
+import quickfix from "../public/assets/images/quickfix.png";
+import stonepays from "../public/assets/images/stonepays.png";
+import trybrass from "../public/assets/images/trybrass.png";
+
+
 
 
 
@@ -27,15 +29,15 @@ export const navlink = [
 export const stacks = [
     {
         title: "react js",
-        rate: 70
+        rate: 80
     },
     {
         title: "javascript",
-        rate: 50
+        rate: 80
     },
     {
         title: "tailwind css",
-        rate: 70
+        rate: 90
     },
     {
         title: "bootstrap",
@@ -47,47 +49,43 @@ export const stacks = [
     },
     {
         title: "css",
-        rate: 60
-    },
-    {
-        title: "git",
-        rate: 60
-    },
-    {
-        title: "github",
-        rate: 60
-    },
-    {
-        title: "vite",
         rate: 80
     },
     {
-        title: "next js (client side)",
+        title: "git",
         rate: 70
     },
     {
+        title: "github",
+        rate: 80
+    },
+    {
+        title: "vite",
+        rate: 90
+    },
+    {
+        title: "next js",
+        rate: 90
+    },
+    {
         title: "node js",
-        rate: 30
+        rate: 70
     },
     {
         title: "express",
-        rate: 30
+        rate: 70
+    },
+    {
+        title: "nest js",
+        rate: 70
     },
     {
         title: "mongo db",
-        rate: 40
+        rate: 70
     },
     {
         title: "mongoose",
-        rate: 40
-    },
-    {
-        title: "C#",
-        rate: 25
-    },
-    {
-        title: "asp.net",
-        rate: 25
+        rate: 70
     },
     {
         title: "ms sql",
@@ -97,19 +95,27 @@ export const stacks = [
 
 export const projects = [
     {
-        title: "mazaways customer",
-        description: "i redesigned the UI from the login page except for the sign up as was requested by me, also fixed the bugs in the code. Java was the backend code I communicated with.",
-        link: "https://customer.mazawayz.com/",
-        image: mazaways
+        title: "Hoechy Employe Management App",
+        description: "Currently Building the full-stack application using nest js, mongodb, next js, tailwind css, axios and render(for the temporary hosting of the serve).",
+        link: "https://vehicle-app-six.vercel.app/",
+        image: hoechy
     },
     {
-        title: "tepnews",
-        description: "i am solely tasked with building the frontend of the readers aspect of the application, i am using create react app as requested by the business, tailwind css for my css utilities, fetching data with axios and i am communicating with java on the backend. The project is still in progress",
-        image: tepnews
+        title: "StonePays App",
+        description: "This is online store that sells gift cards. Currently working on the full-stack application using nest js, typescript, mongodb, tailwind css, axios, next js and render",
+        link: "https://stonepays-app.vercel.app/",
+        image: stonepays
     },
     {
-        title: "sell4me",
-        description: "this an affiliate marketing platform where customers can purchase from a merchant through and affiliate. I used vite in the development of the project and tailwind for the css, the project is still on-going",
-        image: sell
+        title: "QuickFix Order Status",
+        description: "this is an order tracker for users who have an existing order. This enables them track their order with the order id even without being authenticated. I build the frontend part of this applicatication using next js, tailwind css and axios",
+        link: "https://quickfix-order-status.vercel.app/",
+        image: quickfix
+    },
+    {
+        title: "trybrass",
+        description: "this is was a website i was tasked to build as an assessment of my skill for the role of a software developer at Webify. I used next js and tailwind css.",
+        link: "https://trybrass.vercel.app/",
+        image: trybrass
     },
 ]
